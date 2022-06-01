@@ -2,22 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Models\Todo;
 use Illuminate\Http\Request;
+
 
 class TodoController extends Controller
 {
     public function index()
     {
-        $item = Author::all();
+        $item = Todo::all();
         return view('index', ['items' => $items]);
-    }
-
-    public function index()
-    {
-        $item = [
-            'content' = '本文',
-        ];
-        return view('index', $item);
     }
     public function list()
     {
