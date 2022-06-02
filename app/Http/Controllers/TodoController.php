@@ -11,7 +11,7 @@ class TodoController extends Controller
     public function index()
     {
         $item = Todo::all();
-        return view('index', ['items' => $items]);
+        return view('index', ['item' => $item]);
     }
     public function list()
     {
