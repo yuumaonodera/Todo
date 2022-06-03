@@ -10,7 +10,7 @@
 <body>
   @foreach($item as $todo)
       <h1>{{$item -> string}}</h1>
-      <h1>{{$item -> timestamp}}</h1>
+      <h1>{{$item -> timestamp}}
       echo 'item : ' .$item;
       echo '<br>';
       echo 'todo : ' .$todo;

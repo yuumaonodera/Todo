@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Database\seeders\DB;
+use Illuminate\Support\Facades\DB;
 
 
 class TodosTableSeeder extends Seeder
@@ -16,9 +16,7 @@ class TodosTableSeeder extends Seeder
     public function run()
     {
         $param = [
-            'name' => 'yuuma',
-            'age' => 25,
-            'nationality' => 'American'
+            'content' => 'yuuma',
         ];
         DB::table('todos')->insert($param);
     }
