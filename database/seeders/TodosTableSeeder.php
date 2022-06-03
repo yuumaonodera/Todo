@@ -3,9 +3,10 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Database\Seeders\TodosTableSeeder;
+use Database\seeders\DB;
 
-class AuthorsTableSeeder extends Seeder
+
+class TodosTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
