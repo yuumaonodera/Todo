@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Database\Seeders\AuthorTableSeeder;
+use Database\Seeders\TodosTableSeeder;
 
 class AuthorsTableSeeder extends Seeder
 {
@@ -14,6 +14,11 @@ class AuthorsTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $param = [
+            'name' => 'yuuma',
+            'age' => 25,
+            'nationality' => 'American'
+        ];
+        DB::table('todos')->insert($param);
     }
 }
