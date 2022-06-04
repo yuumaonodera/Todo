@@ -4,18 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>COACHTECH</title>
+  <title>Todo</title>
 </head>
 
 <body>
-  @foreach($item as $todo)
-      <h1>{{$item -> string}}</h1>
-      <h1>{{$item -> timestamp}}
-      echo 'item : ' .$item;
-      echo '<br>';
-      echo 'todo : ' .$todo;
-      echo '<br>';
-  @endforeach
+  <?php
+  $item = array('content', 'created_at', 'update_at');
+
+  foreach ($item as $todo) {
+    echo $todo;
+    echo '</br>';
+  }
+  ?>
 </body>
 
 </html>
