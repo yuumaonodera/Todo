@@ -11,6 +11,23 @@
   @foreach($item as $todo)
   <h1>{{$todo -> content}}</h1>
   @endforeach
+
+  <form action='/add' method="post">
+    <table>
+      @csrf
+      <tr>
+        <th>
+          form
+        </th>
+        <td>
+          <input type="text" name="form">
+        </td>
+      </tr>
+      <td>
+        <button>送信</button>
+      </td>
+    </table>
+  </form> 
 </body>
 
 </html>
