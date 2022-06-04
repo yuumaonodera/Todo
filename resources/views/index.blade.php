@@ -8,14 +8,9 @@
 </head>
 
 <body>
-  <?php
-  $item = array('content', 'created_at', 'update_at');
-
-  foreach ($item as $todo) {
-    echo $todo;
-    echo '</br>';
-  }
-  ?>
+  @foreach($item as $todo)
+  <h1>{{$todo -> content}}</h1>
+  @endforeach
 </body>
 
 </html>
