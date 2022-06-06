@@ -4,28 +4,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Todo</title>
+  <title>COACHTECH</title>
 </head>
 
 <body>
   @foreach($item as $todo)
   <h1>{{$todo -> content}}</h1>
   @endforeach
-
-  <form action='/add' method="post">
+  <form action='/' method="POST">
     <table>
       @csrf
       <tr>
-        <th>
-          form
-        </th>
+        <th>from</th>
         <td>
           <input type="text" name="form">
+          <button>追加</button>
         </td>
       </tr>
-      <td>
-        <button>送信</button>
-      </td>
     </table>
   </form> 
 </body>

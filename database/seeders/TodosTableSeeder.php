@@ -6,6 +6,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
 
+
 class TodosTableSeeder extends Seeder
 {
     /**
@@ -20,4 +21,5 @@ class TodosTableSeeder extends Seeder
         ];
         DB::table('todos')->insert($param);
     }
+    public function 
 }

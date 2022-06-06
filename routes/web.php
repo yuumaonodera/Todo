@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TodoController;
-use App\Models\Author;
+use App\Modeles\Author;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,5 +20,4 @@ Route::get('/', function () {
 });
 
 Route::get('/', [TodoController::class, 'index']);
-Route::get('/add', [TodoController::class, 'add']);
-Route::post('/add', [TodoController::class, 'create']);
+Route::post('/', [TodoController::class, 'create']);
