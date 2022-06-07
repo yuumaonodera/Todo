@@ -21,5 +21,4 @@ class TodosTableSeeder extends Seeder
         ];
         DB::table('todos')->insert($param);
     }
-    public function 
 }

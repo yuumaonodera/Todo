@@ -20,7 +20,7 @@ class TodoController extends Controller
         dd($content_infos);
         return view('contents.list', ['content_infos' => $content_infos]);
     }
-    public function create(Request $request)
+    public function index(Request $request)
     {
         $validate_rule = [
             'content' => 'required | max:20'
@@ -28,6 +28,6 @@ class TodoController extends Controller
         $this->validate($request, $validate_rule);
         $form = $request->all();
         Todo::create($form);
-        return view('create', ['txt' => 'ナイス']);
+        return redirect('/');
     }
 }

@@ -17,7 +17,7 @@
       <tr>
         <th>from</th>
         <td>
-          <input type="text" name="form">
+          <input type="text" name="content">
           <button>追加</button>
         </td>
       </tr>
