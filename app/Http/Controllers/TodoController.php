@@ -20,7 +20,7 @@ class TodoController extends Controller
         dd($content_infos);
         return view('contents.list', ['content_infos' => $content_infos]);
     }
-    public function index(Request $request)
+    public function create(Request $request)
     {
         $validate_rule = [
             'content' => 'required | max:20'
