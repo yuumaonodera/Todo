@@ -42,10 +42,18 @@
       justify-content: space-between;
     }
     .th-font3 {
-      width: 30%;
+      margin-left: 90px;
+      padding-left: 20px;
+    }
+    .th-font1 {
+      margin-left:70px;
     }
     .th-font2 {
-      width: -20%;
+      margin-left: 130px;
+      margin-right: 40px;
+    }
+    .th-font {
+      margin-right: 40px;
     }
   </style>
   <form action='/' method="POST">
