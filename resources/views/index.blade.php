@@ -35,11 +35,17 @@
       margin-right: auto;
     }
     .th1 {
+      width: 70%;
+      margin:0 auto;
       font-size: 15px;
       display: flex;
+      justify-content: space-between;
     }
-    th.font {
-      margin-left: 20px;
+    .th-font3 {
+      width: 30%;
+    }
+    .th-font2 {
+      width: -20%;
     }
   </style>
   <form action='/' method="POST">
@@ -53,10 +59,10 @@
       </tr>
       <th>
         <div class="th1">
-          <p class="th.font">作成日</p>
-          <p class="th.font1">タスク名</p>
-          <p class="th.font2">更新</p>
-          <p class="th.font3">削除</p>
+          <p class="th-font">作成日</p>
+          <p class="th-font1">タスク名</p>
+          <p class="th-font2">更新</p>
+          <p class="th-font3">削除</p>
         </div>
       </th>
     </table>
