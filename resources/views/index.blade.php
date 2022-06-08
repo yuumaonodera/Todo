@@ -11,7 +11,6 @@
   <style>
     body {
       background-color: #4b0082;
-      display: table-cell;
     }
     button {
       border-color: #ff00ff;
@@ -19,21 +18,28 @@
       border-radius: 10px;
       padding: 7px 15px 7px 15px;
       margin-left:70px;
+      margin-right:30px;
     }
     input {
       height:30px;
       border-radius: 5px;
       border-color: aliceblue;
       margin-top:20px;
+      margin-left:30px;
     }
     table {
       background-color: white;
-      vertical-align: middle;
+      border-radius:5px;
+      margin-top: 240px;
+      margin-left: auto;
+      margin-right: auto;
     }
-    h2 {
-      display:inline-block;
-      font-size:16px;
-      margin:10px 30px 10px 30px;
+    .th1 {
+      font-size: 15px;
+      display: flex;
+    }
+    th.font {
+      margin-left: 20px;
     }
   </style>
   <form action='/' method="POST">
@@ -46,10 +52,12 @@
         </td>
       </tr>
       <th>
-          <h2>作成日</h2>
-          <h2>タスク名</h2>
-          <h2>更新</h2>
-          <h2>削除</h2>
+        <div class="th1">
+          <p class="th.font">作成日</p>
+          <p class="th.font1">タスク名</p>
+          <p class="th.font2">更新</p>
+          <p class="th.font3">削除</p>
+        </div>
       </th>
     </table>
   </form> 
