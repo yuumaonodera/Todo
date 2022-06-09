@@ -12,6 +12,16 @@
     body {
       background-color: #4b0082;
     }
+    .background {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70%;
+      padding: 24px;
+      background: #fff;
+      border-radius: 8px;
+    }
     button {
       border-color: #ff00ff;
       color: #ff00ff;
@@ -24,57 +34,55 @@
       height:30px;
       border-radius: 5px;
       border-color: aliceblue;
-      margin-top:20px;
       margin-left:30px;
     }
     table {
+      margin-top: 40px;
+      margin-left: 40px;
+    }
+    .content {
       background-color: white;
-      border-radius:5px;
-      margin-top: 240px;
-      margin-left: auto;
-      margin-right: auto;
+      border-radius: 5px;
+      margin-right: 25%;
+      margin-left:25%;
     }
-    .th1 {
-      width: 70%;
-      margin:0 auto;
-      font-size: 15px;
-      display: flex;
-      justify-content: space-between;
+    .title {
+      font-size: 20px;
+      font-weight: bolder;
+      margin-left: 25px;
     }
-    .th-font3 {
-      margin-left: 90px;
-      padding-left: 20px;
+    .tr {
+      margin-left: 20px;
     }
-    .th-font1 {
-      margin-left:70px;
-    }
-    .th-font2 {
-      margin-left: 130px;
-      margin-right: 40px;
-    }
-    .th-font {
-      margin-right: 40px;
-    }
+
   </style>
-  <form action='/' method="POST">
-    <table>
-      @csrf
-      <tr>
-        <td>
-          <input type="text" name="content" size="80px">
-          <button>追加</button>
-        </td>
-      </tr>
-      <th>
-        <div class="th1">
-          <p class="th-font">作成日</p>
-          <p class="th-font1">タスク名</p>
-          <p class="th-font2">更新</p>
-          <p class="th-font3">削除</p>
-        </div>
-      </th>
-    </table>
-  </form> 
+  <div class="content">
+    <div class="card">
+      <p class="title">Todo List</p>
+      <form action='/' method="POST">
+       @csrf
+       <div>
+        <input type="text" name="content" size="70px">
+        <button>追加</button>
+       </div>
+      </form>
+
+      <table>
+       <tr>
+        <th>作成日</th>
+        <th>タスク名</th>
+        <th>更新</th>
+        <th>削除</th>
+       </tr>
+       <tr>
+        <td>aaaaaaaaaaaaaaaaaaaa</td>
+        <td>aaaaaaaaaaaa</td>
+        <td>aaaaaa</td>
+        <td>aaaaaa</td>
+       </tr>
+      </table>
+    </div>
+   </div>
 </body>
 
 </html>
