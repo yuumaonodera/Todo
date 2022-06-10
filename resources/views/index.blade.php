@@ -22,13 +22,14 @@
       background: #fff;
       border-radius: 8px;
     }
-    button {
+    .button-create {
       border-color: #ff00ff;
       color: #ff00ff;
       border-radius: 10px;
       padding: 7px 15px 7px 15px;
       margin-left:70px;
       margin-right:30px;
+      background-color: white;
     }
     input {
       height:30px;
@@ -36,14 +37,11 @@
       border-color: aliceblue;
       margin-left:30px;
     }
-    table {
-      margin-top: 40px;
-      margin-left: 40px;
-    }
     .content {
       background-color: white;
       border-radius: 5px;
-      margin-right: 25%;
+      margin-top: 20%;
+      margin-right: 27%;
       margin-left:25%;
     }
     .title {
@@ -51,10 +49,34 @@
       font-weight: bolder;
       margin-left: 25px;
     }
-    .tr {
-      margin-left: 20px;
+    table {
+      width: 100%;
+      margin-top: 20px;
+      padding-right: 30px;
+      padding-bottom: 20px;
+      padding-left:20px;
     }
-
+    td {
+      padding-left: 10px;
+      padding-top: 10px;
+    }
+    .card {
+      margin-top: -100px;
+    }
+    .button-update {
+      border-radius: 5px;
+      border-color: #ffa500;
+      color: #ffa500;
+      padding:7px 15px 7px 15px;
+      background-color: white;
+    }
+    .button-delete { 
+      border-radius: 5px;
+      border-color: #7fffd4;
+      color: #7fffd4;
+      padding:7px 15px 7px 15px;
+      background-color: white;
+    }
   </style>
   <div class="content">
     <div class="card">
@@ -63,7 +85,7 @@
        @csrf
        <div>
         <input type="text" name="content" size="70px">
-        <button>追加</button>
+        <button class="button-create">追加</button>
        </div>
       </form>
 
@@ -80,6 +102,15 @@
         <td>aaaaaa</td>
         <td>aaaaaa</td>
        </tr>
+
+       @foreach($item as $todo)
+       <tr>
+        <td>{{$todo->created_at}}</td>
+        <td><input type="text" name="content" value="{{$todo}}"> </td>
+        <td><button class="button-update">更新</button></td>
+        <td><button class="button-delete">削除</button></td>
+       </tr>
+       @endforeach
       </table>
     </div>
    </div>
