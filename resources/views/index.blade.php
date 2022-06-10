@@ -106,7 +106,7 @@
        @foreach($item as $todo)
        <tr>
         <td>{{$todo->created_at}}</td>
-        <td><input type="text" name="content" value="{{$todo}}"> </td>
+        <td><input type="text" name="content" value="{{$todo->content}}"> </td>
         <td><button class="button-update">更新</button></td>
         <td><button class="button-delete">削除</button></td>
        </tr>
