@@ -41,6 +41,9 @@
       border-color: aliceblue;
       margin-left:30px;
     }
+    .input-create {
+      margin-top:30px;
+    }
     .content {
       width:760px;
       background-color: white;
@@ -91,14 +94,24 @@
       color: white;
       background:#7fffd4;
     }
+    .li {
+      padding-top:10px;
+    }
   </style>
   <div class="content">
+    @if (count($errors) > 0)
+    <ul>
+      @foreach($errors->all() as $error)
+      <li>{{$error}}</li>
+      @endforeach
+    </ul>
+    @endif
     <div class="card">
       <h3 class="title">Todo List</h3>
       <form action='/' method="POST">
        @csrf
        <div>
-        <input type="text" name="content" size="70px">
+        <input type="text" class="input-create" name="content" size="70px">
         <button class="button-create">追加</button>
        </div>
       </form>

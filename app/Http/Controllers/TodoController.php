@@ -32,6 +32,10 @@ class TodoController extends Controller
     }
     public function update($id, Request $request)
     {
+        $validate_rule = [
+            'content' => 'required | max:20'
+        ];
+        $this->validate($request, $validate_rule);
         $form = $request->all();
         unset($form['_token']);
         Todo::where('id', $id)->update($form);
@@ -39,6 +43,10 @@ class TodoController extends Controller
     }
     public function delete(Request $request)
     {
+        $validate_rule = [
+            'content' => 'required | max:20'
+        ];
+        $this->validate($request, $validate_rule);
         $author = Todo::find($request->id);
         Todo::find($request->id)->delete($author);
         return redirect('/');
