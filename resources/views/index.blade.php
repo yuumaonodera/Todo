@@ -17,10 +17,10 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 70%;
-      padding: 24px;
+      width: 50vw;
+      padding: 30px;
       background: #fff;
-      border-radius: 8px;
+      border-radius: 10px;
     }
     .button-create {
       border-color: #ff00ff;
@@ -41,11 +41,8 @@
       border-color: aliceblue;
       margin-left:30px;
     }
-    .input-create {
-      margin-top:30px;
-    }
     .content {
-      width:760px;
+      width:50vw;
       background-color: white;
       border-radius: 5px;
       position: relative;
@@ -63,6 +60,7 @@
       padding-right: 25px;
       padding-bottom: 20px;
       padding-left:20px;
+      margin-bottom:10px;
     }
     td {
       padding-left: 10px;
@@ -99,19 +97,19 @@
     }
   </style>
   <div class="content">
-    @if (count($errors) > 0)
-    <ul>
-      @foreach($errors->all() as $error)
-      <li>{{$error}}</li>
-      @endforeach
-    </ul>
-    @endif
     <div class="card">
       <h3 class="title">Todo List</h3>
       <form action='/' method="POST">
        @csrf
+       @if (count($errors) > 0)
+       <ul>
+         @foreach($errors->all() as $error)
+         <li>{{$error}}</li>
+         @endforeach
+       </ul>
+       @endif
        <div>
-        <input type="text" class="input-create" name="content" size="70px">
+        <input type="text" name="content" size="70px">
         <button class="button-create">追加</button>
        </div>
       </form>
@@ -124,8 +122,8 @@
         <th>削除</th>
        </tr>
 
-       @foreach($item as $todo)
-       <tr>
+      @foreach($item as $todo)
+      <tr>
         <td>{{$todo->created_at}}</td>
         <form method="POST" action="update/{{$todo->id}}">
           @csrf
@@ -135,8 +133,9 @@
         <form method="POST" action="delete/{{$todo->id}}">
           @csrf
           <td><button class="button-delete">削除</button></td>
-       </tr>
-       @endforeach
+        </form>
+      </tr>
+      @endforeach
       </table>
     </div>
    </div>
