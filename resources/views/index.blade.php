@@ -22,6 +22,12 @@
       background: #fff;
       border-radius: 10px;
     }
+    .container {
+      background-color: #2d197c;
+      height: 100vh;
+      width: 100vw;
+      position:relative;
+    }
     .button-create {
       border-color: #ff00ff;
       color: #ff00ff;
@@ -41,14 +47,7 @@
       border-color: aliceblue;
       margin-left:30px;
     }
-    .content {
-      width:50vw;
-      background-color: white;
-      border-radius: 5px;
-      position: relative;
-      top:360px;
-      margin:0 auto;
-    }
+    
     .title {
       font-size: 20px;
       font-weight: bolder;
@@ -67,8 +66,14 @@
       padding-top: 10px;
     }
     .card {
-      margin-top: -100px;
-      padding-top:1px;
+      background-color: #fff;
+      width:50vw;
+      padding:30px;
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%, -50%);
+      border-radius:10px;
     }
     .button-update {
       border-radius: 5px;
@@ -96,7 +101,8 @@
       padding-top:10px;
     }
   </style>
-  <div class="content">
+  <div class="container">
+   <div class="content">
     <div class="card">
       <h3 class="title">Todo List</h3>
       <form action='/' method="POST">
@@ -139,6 +145,7 @@
       </table>
     </div>
    </div>
+  </div>
 </body>
 
 </html>
