@@ -10,7 +10,7 @@
 <body>
   <style>
     body {
-      background-color: #4b0082;
+      background-color: navy;
     }
     .background {
       position: absolute;
@@ -31,6 +31,10 @@
       margin-right:30px;
       background-color: white;
     }
+    .button-create:hover {
+      background:#ff00ff;
+      color: white;
+    }
     input {
       height:30px;
       border-radius: 5px;
@@ -38,11 +42,12 @@
       margin-left:30px;
     }
     .content {
+      width:760px;
       background-color: white;
       border-radius: 5px;
-      margin-top: 20%;
-      margin-right: 27%;
-      margin-left:25%;
+      position: relative;
+      top:360px;
+      margin:0 auto;
     }
     .title {
       font-size: 20px;
@@ -52,7 +57,7 @@
     table {
       width: 100%;
       margin-top: 20px;
-      padding-right: 30px;
+      padding-right: 25px;
       padding-bottom: 20px;
       padding-left:20px;
     }
@@ -62,6 +67,7 @@
     }
     .card {
       margin-top: -100px;
+      padding-top:1px;
     }
     .button-update {
       border-radius: 5px;
@@ -70,6 +76,10 @@
       padding:7px 15px 7px 15px;
       background-color: white;
     }
+    .button-update:hover {
+      color: white;
+      background: #ffa500;
+    }
     .button-delete { 
       border-radius: 5px;
       border-color: #7fffd4;
@@ -77,10 +87,14 @@
       padding:7px 15px 7px 15px;
       background-color: white;
     }
+    .button-delete:hover {
+      color: white;
+      background:#7fffd4;
+    }
   </style>
   <div class="content">
     <div class="card">
-      <p class="title">Todo List</p>
+      <h3 class="title">Todo List</h3>
       <form action='/' method="POST">
        @csrf
        <div>
@@ -95,12 +109,6 @@
         <th>タスク名</th>
         <th>更新</th>
         <th>削除</th>
-       </tr>
-       <tr>
-        <td>aaaaaaaaaaaaaaaaaaaa</td>
-        <td>aaaaaaaaaaaa</td>
-        <td>aaaaaa</td>
-        <td>aaaaaa</td>
        </tr>
 
        @foreach($item as $todo)
